@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class Solution {
     public int[] pivotArray(int[] nums, int pivot) {
         int l = nums.length;
         List<Integer> before = new ArrayList<>();
@@ -11,7 +11,7 @@ class Solution {
                 after.add(nums[i]);
             } else if (nums[i] < pivot) {
                 before.add(nums[i]);
-            } else if (nums[i] == pivot) {
+            } else { // nums[i] == pivot
                 equal.add(nums[i]);
             }
         }
@@ -19,5 +19,13 @@ class Solution {
         before.addAll(equal);
         before.addAll(after);
         return before.stream().mapToInt(Integer::intValue).toArray();
+    }
+    
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = {9, 12, 5, 10, 14, 3, 10};
+        int pivot = 10;
+        int[] result = sol.pivotArray(nums, pivot);
+        System.out.println("Pivoted array: " + Arrays.toString(result));
     }
 }
