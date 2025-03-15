@@ -1,4 +1,4 @@
-class Solution {
+public class Solution {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder merged = new StringBuilder();
         int i = 0;
@@ -14,5 +14,16 @@ class Solution {
         }
         
         return merged.toString();
+    }
+    
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String word1 = "abc";
+        String word2 = "pqr";
+        System.out.println("Merged String: " + sol.mergeAlternately(word1, word2));
+        
+        // Additional test cases
+        System.out.println("Merged String: " + sol.mergeAlternately(" Hello ", "world"));
+        System.out.println("Merged String: " + sol.mergeAlternately("abcd", "pq"));
     }
 }
