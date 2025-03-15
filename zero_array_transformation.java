@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+public class Solution {
 
     public int minZeroArray(int[] nums, int[][] queries) {
         int n = nums.length, sum = 0, k = 0;
@@ -14,8 +16,7 @@ class Solution {
                 if (k > queries.length) {
                     return -1;
                 }
-                int left = queries[k - 1][0], right = queries[k - 1][1], val =
-                    queries[k - 1][2];
+                int left = queries[k - 1][0], right = queries[k - 1][1], val = queries[k - 1][2];
 
                 // Process start and end of range
                 if (right >= index) {
@@ -27,5 +28,22 @@ class Solution {
             sum += differenceArray[index];
         }
         return k;
+    }
+    
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        
+        // Example Test Case 1:
+        int[] nums = {2, 2, 2};
+        int[][] queries = { {0, 2, 1}, {0, 2, 1} };
+        int result = sol.minZeroArray(nums, queries);
+        System.out.println("Minimum number of queries required: " + result);
+        
+        // Additional Test Case:
+        int[] nums2 = {4, 3, 2};
+        // This is a demonstration input; adjust queries as needed for a valid scenario.
+        int[][] queries2 = { {0, 2, 1}, {0, 1, 1}, {1, 2, 1} };
+        int result2 = sol.minZeroArray(nums2, queries2);
+        System.out.println("Minimum number of queries required for second test case: " + result2);
     }
 }
