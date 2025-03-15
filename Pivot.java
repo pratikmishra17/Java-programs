@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class Pivot {
     public int[] pivotArray(int[] nums, int pivot) {
         int l = nums.length;
         List<Integer> before = new ArrayList<>();
