@@ -1,4 +1,4 @@
-public class Solution {
+public class MergeAlternateStrings {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder merged = new StringBuilder();
         int i = 0;
