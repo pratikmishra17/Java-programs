@@ -1,6 +1,6 @@
 import java.lang.*;
 
-public class Solution {
+public class MaximumCountOfPositiveAndNegative {
     public int maximumCount(int[] nums) {
         int pos = 0;
         int neg = 0;
