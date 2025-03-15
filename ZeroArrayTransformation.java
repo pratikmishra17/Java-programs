@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class ZeroArrayTransformation {
 
     public int minZeroArray(int[] nums, int[][] queries) {
         int n = nums.length, sum = 0, k = 0;
